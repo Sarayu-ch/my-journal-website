@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        .header-decoration {
+            border: 2px dashed #ffc0cb;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: white;
+            position: relative;
+            height: 120px; /* Adjusted height for better visibility */
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* General strawberry image style */
+        .strawberry-image {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            z-index: 1; /* Ensure strawberries are behind the heading */
+        }
+
+        /* Top strawberries */
+        
+        .strawberry-2 { left: 60px; top: 10px; }
+        .strawberry-3 { left: 110px; top: 10px; }
+        .strawberry-4 { left: 160px; top: 10px; }
+        .strawberry-5 { left: 210px; top: 10px; }
+        .strawberry-6 { left: 260px; top: 10px; }
+        .strawberry-7 { left: 310px; top: 10px; }
+        .strawberry-8 { left: 360px; top: 10px; }
+        .strawberry-9 { left: 410px; top: 10px; }
+        .strawberry-10 { left: 460px; top: 10px; }
+        .strawberry-11 { left: 510px; top: 10px; }
+        .strawberry-12 { left: 560px; top: 10px; }
+        .strawberry-13 { left: 610px; top: 10px; }
+        .strawberry-14 { left: 660px; top: 10px; }
+        .strawberry-15 { left: 710px; top: 10px; }
+
+        /* Bottom strawberries */
+        
+        .strawberry-17 { left: 60px; bottom: 10px; }
+        .strawberry-18 { left: 110px; bottom: 10px; }
+        .strawberry-19 { left: 160px; bottom: 10px; }
+        .strawberry-20 { left: 210px; bottom: 10px; }
+        .strawberry-21 { left: 260px; bottom: 10px; }
+        .strawberry-22 { left: 310px; bottom: 10px; }
+        .strawberry-23 { left: 360px; bottom: 10px; }
+        .strawberry-24 { left: 410px; bottom: 10px; }
+        .strawberry-25 { left: 460px; bottom: 10px; }
+        .strawberry-26 { left: 510px; bottom: 10px; }
+        .strawberry-27 { left: 560px; bottom: 10px; }
+        .strawberry-28 { left: 610px; bottom: 10px; }
+        .strawberry-29 { left: 660px; bottom: 10px; }
+        .strawberry-30 { left: 710px; bottom: 10px; }
+
+        /* Left side strawberries */
+        .strawberry-31 { left: 0; top: 10px; }
+        .strawberry-32 { left: 0; top: 50px; }
+        .strawberry-35 { left: 0; bottom: 10px; }
+
+        /* Right side strawberries */
+        .strawberry-33 { right: 0; top: 10px; }
+        .strawberry-34 { right: 0; top: 50px; }
+        .strawberry-36 { right: 0; bottom: 10px; }
+
+        /* Center the heading */
+        .heading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Vertically and horizontally center */
+            font-size: 24px;
+            color: #333;
+            z-index: 2; /* Ensure the heading is above the strawberries */
+        }
+
+        .title-section {
+            background-color: #ffc0cb;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            min-height: 30px;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            border: 1px solid #ffb6c1;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .schedule-table th {
+            background-color: white;
+            color: #333;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .schedule-table td {
+            height: 25px;
+        }
+
+        .schedule-table .time-column {
+            width: 100px;
+            background-color: white;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        /* Styling the input fields inside table cells */
+        .schedule-table input {
+            width: 90%;
+            height: 100%;
+            border: none;
+            text-align: center;
+            font-size: 13px;
+            background-color: transparent;
+            outline: none;
+        }
+        .home-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ff66b2;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(255, 102, 178, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .home-button:hover {
+            transform: scale(1.1);
+            background-color: #ff3385;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-decoration">
+            <!-- Top strawberries -->
+           
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-2">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-3">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-4">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-5">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-6">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-7">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-8">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-9">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-10">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-11">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-12">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-13">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-14">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-15">
+
+            <!-- Bottom strawberries -->
+            
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-17">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-18">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-19">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-20">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-21">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-22">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-23">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-24">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-25">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-26">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-27">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-28">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-29">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-30">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-31">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-32">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-33">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-34">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-35">
+            <img src="strawberry.jpg" alt="Strawberry" class="strawberry-image strawberry-36">
+
+            <!-- Heading "Time Table" centered within the strawberries -->
+            <div class="heading">Time Table</div>
+        </div>
+
+        <div class="title-section"></div>
+
+        <table class="schedule-table">
+            <tr>
+                <th class="time-column">Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+            <tbody>
+                <tr><td class="time-column">6:00 AM</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                <tr><td class="time-column">7:00 AM</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                <tr><td class="time-column">8:00 AM</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                <tr><td class="time-column">9:00 AM</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                <tr><td class="time-column">10:00 AM</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                <tr><td class="time-column">11:00 AM</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                <tr><td class="time-column">12:00 PM</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                <tr><td class="time-column">1:00 PM</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                <tr><td class="time-column">2:00 PM</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                <tr><td class="time-column">3:00 PM</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+            </tbody>
+        </table>
+        <a href="page.html" class="home-button">⌂</a>
+    </div>
+</body>
+</html>

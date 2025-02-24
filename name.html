@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Tracker - Main Page</title>
+    <link rel="stylesheet" href="main-styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>BIRTHDAYS</h1>
+
+        <!-- List of Months with 'Add' Buttons -->
+        <div class="months-list">
+            <div class="month-row" style="background-color: #FFDDE1;">
+                <span>January</span>
+                <button onclick="addNameField('january')">Add</button>
+                <div class="name-list" id="january"></div>
+            </div>
+            <div class="month-row" style="background-color: #FFECB3;">
+                <span>February</span>
+                <button onclick="addNameField('february')">Add</button>
+                <div class="name-list" id="february"></div>
+            </div>
+            <div class="month-row" style="background-color: #D4F1F4;">
+                <span>March</span>
+                <button onclick="addNameField('march')">Add</button>
+                <div class="name-list" id="march"></div>
+            </div>
+            <div class="month-row" style="background-color: #E2F0CB;">
+                <span>April</span>
+                <button onclick="addNameField('april')">Add</button>
+                <div class="name-list" id="april"></div>
+            </div>
+            <div class="month-row" style="background-color: #ffddfa;">
+                <span>May</span>
+                <button onclick="addNameField('may')">Add</button>
+                <div class="name-list" id="may"></div>
+            </div>
+            <div class="month-row" style="background-color: #e4ffdd;">
+                <span>June</span>
+                <button onclick="addNameField('june')">Add</button>
+                <div class="name-list" id="june"></div>
+            </div>
+            <div class="month-row" style="background-color: #edddff;">
+                <span>July</span>
+                <button onclick="addNameField('july')">Add</button>
+                <div class="name-list" id="july"></div>
+            </div>
+            <div class="month-row" style="background-color: #fff4dd;">
+                <span>August</span>
+                <button onclick="addNameField('august')">Add</button>
+                <div class="name-list" id="august"></div>
+            </div>
+            <div class="month-row" style="background-color: #ffdde9;">
+                <span>September</span>
+                <button onclick="addNameField('september')">Add</button>
+                <div class="name-list" id="september"></div>
+            </div>
+            <div class="month-row" style="background-color: #eaddff;">
+                <span>October</span>
+                <button onclick="addNameField('october')">Add</button>
+                <div class="name-list" id="october"></div>
+            </div>
+            <div class="month-row" style="background-color: #e2ffdd;">
+                <span>November</span>
+                <button onclick="addNameField('november')">Add</button>
+                <div class="name-list" id="november"></div>
+            </div>
+            <div class="month-row" style="background-color: #ddfffc;">
+                <span>December</span>
+                <button onclick="addNameField('december')">Add</button>
+                <div class="name-list" id="december"></div>
+            </div>
+        </div>
+        <a href="page.html" class="home-button">⌂</a>
+    </div>
+
+    <script>
+        function addNameField(monthId) {
+            const monthDiv = document.getElementById(monthId);
+
+            // Create a new div for the name entry
+            const nameEntry = document.createElement("div");
+            nameEntry.classList.add("name-entry");
+
+            // Create an input field for the name
+            const nameInput = document.createElement("input");
+            nameInput.type = "text";
+            nameInput.placeholder = "Enter Name";
+            nameInput.classList.add("name-input");
+
+            // Create a save button for the name
+            const saveButton = document.createElement("button");
+            saveButton.innerText = "Save";
+            saveButton.classList.add("save-button");
+
+            // Add event listener to save button to display name
+            saveButton.addEventListener("click", function() {
+                const name = nameInput.value;
+                if (name.trim() !== "") {
+                    // Create a span to display the saved name
+                    const nameDisplay = document.createElement("span");
+                    nameDisplay.classList.add("name-display");
+                    nameDisplay.innerText = name;
+
+                    // Replace input and save button with the name display
+                    nameEntry.innerHTML = "";  // Clear the nameEntry div
+                    nameEntry.appendChild(nameDisplay);  // Display the name
+                }
+            });
+
+            // Append the input field and save button to the name entry div
+            nameEntry.appendChild(nameInput);
+            nameEntry.appendChild(saveButton);
+
+            // Add the name entry to the specified month div
+            monthDiv.appendChild(nameEntry);
+        }
+    </script>
+</body>
+</html>

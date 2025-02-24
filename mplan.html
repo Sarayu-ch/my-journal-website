@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="planner-container">
+        <h1 class="title">Daily Planner</h1>
+        <div class="date-section">
+            <label for="date">Date:</label>
+            <input type="date" id="date">
+        </div>
+        <div class="days">
+            <span>Mon</span> <span>Tue</span> <span>Wed</span> <span>Thu</span> <span>Fri</span> <span>Sat</span> <span>Sun</span>
+        </div>
+        <div class="schedule">
+            <div class="time-activity">
+                <label>Time</label>
+                <label>Activity</label>
+            </div>
+            <!-- Add multiple rows for time and activity inputs -->
+            <div class="entry">
+                <input type="time" class="time-input">
+                <input type="text" class="activity-input" placeholder="Enter activity">
+            </div>
+            <div class="entry">
+                <input type="time" class="time-input">
+                <input type="text" class="activity-input" placeholder="Enter activity">
+            </div>
+            <!-- Repeat above 'entry' div as needed -->
+        </div>
+        <div class="important">
+            <label>Important</label>
+            <textarea placeholder="Important notes"></textarea>
+        </div>
+        <div class="todo">
+            <label>To Do</label>
+            <ul>
+                <li><input type="checkbox"> <input type="text" placeholder="Task"></li>
+                <li><input type="checkbox"> <input type="text" placeholder="Task"></li>
+                <!-- Repeat as needed -->
+            </ul>
+        </div>
+        <div class="note">
+            <label>Note</label>
+            <textarea placeholder="Add notes here"></textarea>
+        </div>
+        <div class="reminder">
+            <label>Reminder</label>
+            <textarea placeholder="Add reminders"></textarea>
+        </div>
+        <a href="page.html" class="home-button">⌂</a>
+    </div>
+</body>
+</html>

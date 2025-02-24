@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Diary</title>
+    <style>
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f0f8; /* Soft pink background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Main container */
+        .diary-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+
+        /* Title styling */
+        .diary-container h1 {
+            color: #ff66b2;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* Date input styling */
+        .date-input {
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        /* Text area styling */
+        .diary-textarea {
+            width: 90%;
+            height: 300px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            resize: none; /* Prevent resizing */
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Save button styling */
+        .save-button {
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .save-button:hover {
+            background-color: #ff3385;
+        }
+        .home-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ff66b2;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(255, 102, 178, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .home-button:hover {
+            transform: scale(1.1);
+            background-color: #ff3385;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="diary-container">
+        <h1>My Diary</h1>
+        <input type="date" class="date-input" id="entryDate" placeholder="Select Date">
+        <textarea class="diary-textarea" placeholder="Write your thoughts here..."></textarea>
+        <button class="save-button" onclick="saveEntry()">Save Entry</button>
+        <a href="page.html" class="home-button">⌂</a>
+    </div>
+
+    <script>
+        // Function to save the diary entry (for demo purposes, this just logs to console)
+        function saveEntry() {
+            const date = document.getElementById('entryDate').value;
+            const text = document.querySelector('.diary-textarea').value;
+            
+            if (date && text) {
+                console.log(`Date: ${date}\nEntry: ${text}`);
+                alert("Your diary entry has been saved!");
+            } else {
+                alert("Please select a date and write your entry before saving.");
+            }
+        }
+    </script>
+
+</body>
+</html>

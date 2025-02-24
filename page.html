@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Body Styles */
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ff66b2;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            font-size: 36px;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Main Grid Container */
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            margin-top: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Button Styles */
+        .button {
+            padding: 15px 25px;
+            background-color: #ff66b2;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(255, 102, 178, 0.2);
+        }
+
+        .button:hover {
+            background-color: #ff3385;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 102, 178, 0.3);
+        }
+
+        .auth-button {
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #ff66b2;
+            border: 2px solid #ff66b2;
+            font-size: 16px;
+            border-radius: 25px;
+        }
+
+        .auth-button:hover {
+            background-color: #ff66b2;
+            color: white;
+        }
+
+        .home-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ff66b2;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(255, 102, 178, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .home-button:hover {
+            transform: scale(1.1);
+            background-color: #ff3385;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 20px;
+            width: 300px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-content h2 {
+            color: #ff66b2;
+            margin-top: 0;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ff66b2;
+            font-size: 16px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            color: #ff66b2;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Title and Auth Buttons -->
+    <div class="header">
+        <h1 class="title">My Journal</h1>
+        <div class="auth-buttons">
+            <button class="button auth-button" onclick="openModal('loginModal')">Log In</button>
+            <button class="button auth-button" onclick="openModal('signupModal')">Sign Up</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="grid-container">
+            <a href="tracker.html" class="button">Water Tracker</a>
+            <a href="timetable.html" class="button">Schedule</a>
+            <a href="todo.html" class="button">TODO List</a>
+            <a href="mplan.html" class="button">Daily Planner</a>
+            <a href="name.html" class="button">Birthdays</a>
+            <a href="diaryy.html" class="button">My Diary</a>
+        </div>
+    </div>
+
+    <!-- Home Button -->
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form action="#">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="button">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Create a New Account</h2>
+            <form action="#">
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit" class="button">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const loginModal = document.getElementById('loginModal');
+            const signupModal = document.getElementById('signupModal');
+            if (event.target == loginModal) {
+                closeModal('loginModal');
+            } else if (event.target == signupModal) {
+                closeModal('signupModal');
+            }
+        }
+    </script>
+</body>
+</html>
